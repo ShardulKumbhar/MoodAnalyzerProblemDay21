@@ -14,7 +14,7 @@ public class MoodAnalyzerTesting {
 	@Test
 	public void Test() {
 	
-		assertEquals("Happy", MoodAnalyzer.analyzeMood("I am in happy mood"));
+		assertEquals("Sad", MoodAnalyzer.analyzeMood("I am in sad mood"));
 	}
 
 }

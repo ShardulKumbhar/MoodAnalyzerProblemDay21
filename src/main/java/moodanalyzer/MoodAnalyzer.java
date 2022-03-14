@@ -18,14 +18,14 @@ public class MoodAnalyzer {
 			 * 2.condition if person is happy
 			 */
 			if (message.toLowerCase().contains("happy")) {
-				System.out.println("Happy");
+				//System.out.println("Happy");
 				return "Happy";
 
 				/*
 				 * 3.condition if person is sad
 				 */
 			} else if (message.toLowerCase().contains("sad")) {
-				System.out.println("Sad");
+				//System.out.println("Sad");
 				return "Sad";
 			} else {
 				throw new NullPointerException();
