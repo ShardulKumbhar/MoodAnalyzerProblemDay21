@@ -16,6 +16,7 @@ public class MoodAnalyzerTesting {
 	 * 2.happy mood
 	 * 3.sad mood
 	 * 4.any mood
+	 * 5.null mood
 	 * ========================
 	 */
 
@@ -48,14 +49,25 @@ public class MoodAnalyzerTesting {
 	}
 
 	/*
-	 * 4.any mood
+	 * 4.Anymood
 	 */
 	@Test
 	public void anyMood() {
 
 		mood.setMessage("I am in any mood");
 		String result = mood.analyzeMood();
-		Assert.assertEquals("Happy", result);
+		Assert.assertEquals("Any", result);
+	}
+
+	/*
+	 * 5.null mood
+	 */
+	@Test
+	public void nullMood() {
+
+		mood.setMessage(null);
+		String result = mood.analyzeMood();
+		Assert.assertEquals("Invalid mood", result);
 
 	}
 }
