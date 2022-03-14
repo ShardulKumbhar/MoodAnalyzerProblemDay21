@@ -4,18 +4,26 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-
 public class MoodAnalyzerTesting {
 
 	/*
-	 * junit testing to check mood
+	 * Testing Happy Mood
 	 */
-
+	MoodAnalyzer mood = new MoodAnalyzer();
 	@Test
 	public void Test() {
-	
-		assertEquals("Happy", MoodAnalyzer.analyzeMood("I am in happy mood"));
+		
+		String result = mood.analyzeMood("I am in happy mood");
+		assertEquals("Happy", result);
 	}
 
+	/*
+	 * Testing sad Mood
+	 */
+	@Test
+	public void Test2() {
+		
+		String result = mood.analyzeMood("I am in sad mood");
+		assertEquals("Sad", result);
+	}
 }
-	

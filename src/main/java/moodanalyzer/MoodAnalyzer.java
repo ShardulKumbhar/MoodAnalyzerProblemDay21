@@ -1,43 +1,29 @@
 package moodanalyzer;
 
 public class MoodAnalyzer {
-	/**
-	 * 
-	 * @param message-mood of person
-	 * @return
-	 */
+	
+	public String analyzeMood(String message) {
 
-	/**
-	 * 1.creating a method to check mood
-	 */
-	public static String analyzeMood(String message) {
+		/*
+		 * checking happy mood 
+		 */
+		if (message.toLowerCase().contains("happy")) {
 
-		try {
+			return "Happy";
+		}
+		/*
+		 * checking sad mood 
+		 */
+		else if (message.toLowerCase().contains("sad")) {
 
-			/*
-			 * 2.condition if person is happy
-			 */
-			if (message.toLowerCase().contains("happy")) {
-				System.out.println("Happy");
-				return "Happy";
-
-				/*
-				 * 3.condition if person is sad
-				 */
-			} else if (message.toLowerCase().contains("sad")) {
-				System.out.println("Sad");
-				return "Sad";
-			} else {
-				throw new NullPointerException();
-			}
-
-			/*
-			 * 4.catching exception if any
-			 */
-		} catch (NullPointerException e) {
-			System.out.println("Person is not happy or sad");
+			return "Sad";
+		}
+		/*
+		 * checking any mood 
+		 */
+		else {
+			System.out.println("Did Not contain Happy or Sad");
 		}
 		return null;
 	}
-
 }
