@@ -1,43 +1,73 @@
 package moodanalyzer;
 
 public class MoodAnalyzer {
+	private String message;
 	/**
-	 * 
+	 * PROCEDURE
+	 * =======================================
+	 *  1.created parametric constructor
+	 *  2.created another constructor
+	 *  3. created getter and setters
+	 *  4.creating a method to check various mood
+	 *  5.condition if person is happy
+	 *  6.condition if person is sad
+	 *  7.condition if person is in any mood
 	 * @param message-mood of person
-	 * @return
+	 * =========================================
 	 */
+	
+	/*
+	 * 1.created parametric constructor
+	 */
+	public MoodAnalyzer(String message) {
+		super();
+		this.message = message;
+	}
+
+	/*
+	 * 2.created another constructor
+	 */
+	public MoodAnalyzer() {
+
+	}
+
+	/*
+	 * 3. created getter and setters
+	 */
+	public String getMessage() {
+		return message;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
+	}
 
 	/**
-	 * 1.creating a method to check mood
+	 * 4.creating a method to check various mood
 	 */
-	public static String analyzeMood(String message) {
+	public String analyzeMood() {
 
-		try {
-
-			/*
-			 * 2.condition if person is happy
-			 */
-			if (message.toLowerCase().contains("happy")) {
-				//System.out.println("Happy");
-				return "Happy";
-
-				/*
-				 * 3.condition if person is sad
-				 */
-			} else if (message.toLowerCase().contains("sad")) {
-				//System.out.println("Sad");
-				return "Sad";
-			} else {
-				throw new NullPointerException();
-			}
+		/*
+		 * 5.condition if person is happy
+		 */
+		if (message.toLowerCase().contains("happy")) {
+			return "Happy";
 
 			/*
-			 * 4.catching exception if any
+			 * 6.condition if person is sad
 			 */
-		} catch (NullPointerException e) {
-			System.out.println("Person is not happy or sad");
+		} else if (message.toLowerCase().contains("sad")) {
+			return "Sad";
+
+			/*
+			 * 7.condition if person is in any mood
+			 */
+		} else {
+
+			return "Happy";
+
 		}
-		return null;
+
 	}
 
 }
