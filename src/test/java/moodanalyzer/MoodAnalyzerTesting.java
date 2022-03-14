@@ -67,7 +67,7 @@ public class MoodAnalyzerTesting {
 
 		mood.setMessage(null);
 		String result = mood.analyzeMood();
-		Assert.assertEquals("Invalid mood", result);
+		Assert.assertEquals("Happy", result);
 
 	}
 }

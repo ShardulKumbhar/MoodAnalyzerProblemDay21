@@ -70,7 +70,7 @@ public class MoodAnalyzer {
 			 * 8.catching nullpoint exception
 			 */
 		} catch (NullPointerException e) {
-			return "Invalid mood";
+			return "Happy";
 
 		}
 
