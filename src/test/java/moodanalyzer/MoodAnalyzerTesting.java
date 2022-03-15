@@ -29,7 +29,7 @@ public class MoodAnalyzerTesting {
 	 * 2.happy mood
 	 */
 	@Test
-	public void happyMood() {
+	public void happyMood() throws MoodAnalyzerException {
 
 		mood.setMessage("I am in happy mood");
 
@@ -41,7 +41,7 @@ public class MoodAnalyzerTesting {
 	 * 3.sad mood
 	 */
 	@Test
-	public void SadMood() {
+	public void SadMood() throws MoodAnalyzerException{
 
 		mood.setMessage("I am in sad mood");
 		String result = mood.analyzeMood();
@@ -52,7 +52,7 @@ public class MoodAnalyzerTesting {
 	 * 4.Anymood
 	 */
 	@Test
-	public void anyMood() {
+	public void anyMood() throws MoodAnalyzerException{
 
 		mood.setMessage("I am in any mood");
 		String result = mood.analyzeMood();
@@ -63,11 +63,14 @@ public class MoodAnalyzerTesting {
 	 * 5.null mood
 	 */
 	@Test
-	public void nullMood() {
-
+	public void nullMood() throws MoodAnalyzerException{
+try {
 		mood.setMessage(null);
 		String result = mood.analyzeMood();
 		Assert.assertEquals("Happy", result);
+}catch(MoodAnalyzerException e) {
+	System.out.println("Invalid mood");
+}
 
 	}
 }

@@ -4,6 +4,7 @@ public class MoodAnalyzer {
 	private String message;
 	/**
 	 * PROCEDURE
+	 * to create custom exception
 	 * =======================================
 	 *  1.created parametric constructor
 	 *  2.created another constructor
@@ -20,7 +21,7 @@ public class MoodAnalyzer {
 	/*
 	 * 1.created parametric constructor
 	 */
-	public MoodAnalyzer(String message) {
+	public MoodAnalyzer(String message) throws MoodAnalyzerException {
 		super();
 		this.message = message;
 	}
@@ -46,7 +47,7 @@ public class MoodAnalyzer {
 	/**
 	 * 4.creating a method to check various mood
 	 */
-	public String analyzeMood() {
+	public String analyzeMood() throws MoodAnalyzerException {
 		try {
 			/*
 			 * 5.condition if person is happy
@@ -70,7 +71,7 @@ public class MoodAnalyzer {
 			 * 8.catching nullpoint exception
 			 */
 		} catch (NullPointerException e) {
-			return "Happy";
+			throw new MoodAnalyzerException("Exception found");
 
 		}
 
